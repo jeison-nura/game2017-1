@@ -1,0 +1,6 @@
+co\edu\konrad\ventalibroskonrad\entities\EstudianteEntity.class
+co\edu\konrad\ventalibroskonrad\persistence\LibroPersistence.class
+co\edu\konrad\ventalibroskonrad\entities\CursoEntity.class
+co\edu\konrad\ventalibroskonrad\entities\EstudianteCursoEntity.class
+co\edu\konrad\ventalibroskonrad\entities\LibroEntity.class
+co\edu\konrad\ventalibroskonrad\persistence\EstudiantePersistence.class
