@@ -35,7 +35,7 @@ public class EstudianteCursoDTO {
      */
     public EstudianteCursoDTO(EstudianteCursoEntity ec) {
         this.id = ec.getIdEstudianteCurso();
-        if(ec.getEstudianteEntity()!=null){
+        if(ec.getEstudianteEntity() != null){
             EstudianteEntity estudiante = new EstudianteEntity();
             estudiante.setIdEstudiante(ec.getEstudianteEntity().getIdEstudiante());
             estudiante.setNombreEstudiante(ec.getEstudianteEntity().getNombreEstudiante());
@@ -44,7 +44,7 @@ public class EstudianteCursoDTO {
             estudiante.setCorreoElectronico(ec.getEstudianteEntity().getCorreoElectronico());
             this.estudiante = new EstudianteDTO(estudiante);
         }
-        if(ec.getCurso()!=null){
+        if(ec.getCurso() != null){
             CursoEntity curso = new CursoEntity();
             curso.setIdCurso(ec.getCurso().getIdCurso());
             curso.setNombreCurso(ec.getCurso().getNombreCurso());
@@ -59,7 +59,7 @@ public class EstudianteCursoDTO {
      * @return entidad EstudianteCurso
      */
     public EstudianteCursoEntity toEntity(){
-       EstudianteCursoEntity ece= new EstudianteCursoEntity();
+       EstudianteCursoEntity ece = new EstudianteCursoEntity();
        ece.setIdEstudianteCurso(this.id);
        if(this.estudiante != null){
            EstudianteEntity estudiante = new EstudianteEntity();
@@ -69,7 +69,6 @@ public class EstudianteCursoDTO {
            estudiante.setCodigoEstudiante(this.estudiante.getCodigoEstudiante());
            estudiante.setCorreoElectronico(this.estudiante.getCorreoEstudiante());
            ece.setEstudianteEntity(estudiante);
-           
        }
        if(this.curso != null){
            CursoEntity curso = new CursoEntity();
@@ -80,14 +79,6 @@ public class EstudianteCursoDTO {
            ece.setCurso(curso);
        }
        return ece;
-    }
-
-    public int getPeriodo() {
-        return periodo;
-    }
-
-    public void setPeriodo(int periodo) {
-        this.periodo = periodo;
     }
 
     public Long getId() {
@@ -113,6 +104,16 @@ public class EstudianteCursoDTO {
     public void setCurso(CursoDTO curso) {
         this.curso = curso;
     }
+
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+    
+    
     
     
     

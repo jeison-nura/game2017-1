@@ -28,7 +28,7 @@ public class CursoEntity implements Serializable {
      * Llave primaria de la Entidad Curso
      */
     @Id
-    @Column (name = "id_curso", unique = true)
+    @Column (name = "id_curso", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idCurso;
     

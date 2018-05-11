@@ -28,7 +28,7 @@ public class EstudianteCursoEntity implements Serializable{
      * Atributo que maneja el id de la tabla
      */
     @Id 
-    @Column(name="id_est_curso", unique=true, nullable=false)
+    @Column(name="id_est_curso", nullable=false)
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long idEstudianteCurso;
     
@@ -37,14 +37,14 @@ public class EstudianteCursoEntity implements Serializable{
      * 
      */
     @ManyToOne
-    @JoinColumn(name="id_estudiante")
+    @JoinColumn(name="estudiante")
     private EstudianteEntity estudianteEntity;
           
     /**
      * Atributo que maneja la relacion con la tabla Curso
      */
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name="curso")
     private CursoEntity curso;
     
     @Column 

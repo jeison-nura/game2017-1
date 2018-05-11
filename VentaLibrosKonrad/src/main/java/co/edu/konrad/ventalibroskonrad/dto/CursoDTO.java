@@ -6,6 +6,9 @@
 package co.edu.konrad.ventalibroskonrad.dto;
 
 import co.edu.konrad.ventalibroskonrad.entities.CursoEntity;
+import co.edu.konrad.ventalibroskonrad.entities.EstudianteEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * DTO para el mapeo objeto relacional de la Entidad Curso
@@ -51,6 +54,19 @@ public class CursoDTO {
         return curso;
     }
 
+    /**
+     * Conversión masiva de EstudianteEntity a EstudianteDTO 
+     * @param estudianteList
+     * @return Lista Estudiante DTO
+     */
+    public static List<CursoDTO> toCursoList(List<CursoEntity> cursoList){
+        List<CursoDTO> listaCursoDTO = new ArrayList<>();
+        for (int i = 0; i < cursoList.size(); i++) {            
+            listaCursoDTO.add(new CursoDTO(cursoList.get(i)));
+        }
+        return listaCursoDTO;
+    }
+    
     public Long getId() {
         return id;
     }

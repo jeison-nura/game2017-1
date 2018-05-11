@@ -28,7 +28,7 @@ public class LibroEntity implements Serializable {
      * Llave primaria de la Entidad Libro
      */
     @Id
-    @Column (name = "id_libro", unique = true)
+    @Column (name = "id_libro", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idLibro;
     

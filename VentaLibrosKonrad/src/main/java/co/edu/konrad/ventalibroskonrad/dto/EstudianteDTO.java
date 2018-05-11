@@ -7,6 +7,7 @@ package co.edu.konrad.ventalibroskonrad.dto;
 
 import co.edu.konrad.ventalibroskonrad.entities.EstudianteEntity;
 import com.sun.javafx.scene.control.skin.VirtualFlow;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -79,14 +80,14 @@ public class EstudianteDTO {
      * @param estudianteList
      * @return Lista Estudiante DTO
      */
-    public List<EstudianteDTO> toEstudianteList(List<EstudianteEntity> estudianteList){
-        List<EstudianteDTO> listaEstudianteDTO = new VirtualFlow.ArrayLinkedList<>();
+    public static List<EstudianteDTO> toEstudianteList(List<EstudianteEntity> estudianteList){
+        List<EstudianteDTO> listaEstudianteDTO = new ArrayList<>();
         for (int i = 0; i < estudianteList.size(); i++) {            
             listaEstudianteDTO.add(new EstudianteDTO(estudianteList.get(i)));
         }
         return listaEstudianteDTO;
     }
-
+        
     public Long getId() {
         return id;
     }

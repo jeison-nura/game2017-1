@@ -18,7 +18,7 @@ import javax.persistence.NamedQuery;
  * @author Enrique Suarez
  */
 @Entity (name = "Estudiante")
-@NamedQuery (name="Estudiante.findByName", query="Select e from EstudianteEntity e where e.nombreEstudiante = :nombre")
+@NamedQuery (name="Estudiante.findByName", query="select e from Estudiante e where e.nombreEstudiante = :nombre")
 public class EstudianteEntity implements Serializable {
     
     /**
@@ -30,7 +30,7 @@ public class EstudianteEntity implements Serializable {
      * Llave primaria de la Entidad Estudiante
      */
     @Id
-    @Column (name = "id_estudiante", unique = true)
+    @Column (name = "id_estudiante", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEstudiante;
     
